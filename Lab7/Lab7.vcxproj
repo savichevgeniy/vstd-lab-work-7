@@ -93,6 +93,8 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,6 +126,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Task1.cpp" />
+    <ClCompile Include="Task2.cpp" />
+    <ClCompile Include="Task3.cpp" />
+    <ClCompile Include="Task4.cpp" />
+    <ClCompile Include="Task5.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Task1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Task2.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Task3.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Task4.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Task5.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Task1.resx">
+      <DependentUpon>Task1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task2.resx">
+      <DependentUpon>Task2.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task3.resx">
+      <DependentUpon>Task3.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task4.resx">
+      <DependentUpon>Task4.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Task5.resx">
+      <DependentUpon>Task5.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
